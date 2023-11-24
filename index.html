@@ -17,7 +17,7 @@
         </div>
         <div id="ddesc">
           <h1>Katiana Kontolati</h1>
-          <h2>I like to train deep neural nets on large datasets 🧠🤖💥</h2>
+          <h2>I like building models for scientific applications 🧠🤖💥</h2>
           <div id="dico">
             <a href="https://twitter.com/kontolati"><img src="assets/ctwitter.svg" class="iico" /></a>
             <a href="https://github.com/katiana22"><img src="assets/cgithub.svg" class="iico"/></a>
@@ -28,5 +28,24 @@
         </div>
       </div>
     </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- attempt hiding from spambots :p -->
+    <script type="text/javascript">
+      const rot13 = (message) => {
+        const alpha = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
+        return message.replace(/[a-z]/gi, letter => alpha[alpha.indexOf(letter) + 13]);
+      }
+      var e_is_shown = false;
+      document.getElementById('iemail').addEventListener("click", function(){
+        let demail = document.getElementById('demail');
+        let msg = "xngvnan.xbagbyngv" + "@" + "tznvy.pbz"
+        demail.innerHTML = rot13(msg);
+        demail.style.opacity = e_is_shown ? 0 : 1;
+        e_is_shown = !e_is_shown;
+      })
+    </script>
+    
   </body>
 </html>
