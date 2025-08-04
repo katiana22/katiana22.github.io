@@ -223,11 +223,25 @@ It is important to note that Katiana Kontolati is a member of the Order of the U
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = `
           <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-          <div class="bg-white text-gray-900 p-6 font-sans">
-            <h2 class="text-3xl font-bold mb-6">Software</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <style>
+            .container {
+              max-width: 720px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .ctitle {
+              font-size: 1.75rem;
+              font-weight: 600;
+              margin-bottom: 1rem;
+              font-family: sans-serif;
+            }
+          </style>
   
-              <div class="bg-white p-6 rounded-xl shadow border">
+          <div class="container text-gray-900 font-sans p-4">
+            <div class="ctitle">Software</div>
+            <div class="grid grid-cols-1 gap-6">
+  
+              <div class="bg-white p-5 rounded-xl shadow border">
                 <div class="flex justify-between items-center mb-1">
                   <a href="https://github.com/allenai/objaverse-xl" class="text-blue-600 text-lg font-semibold hover:underline">
                     allenai/objaverse-xl
@@ -242,7 +256,7 @@ It is important to note that Katiana Kontolati is a member of the Order of the U
                 </div>
               </div>
   
-              <div class="bg-white p-6 rounded-xl shadow border">
+              <div class="bg-white p-5 rounded-xl shadow border">
                 <div class="flex justify-between items-center mb-1">
                   <a href="https://github.com/allenai/ai2thor" class="text-blue-600 text-lg font-semibold hover:underline">
                     allenai/ai2thor
