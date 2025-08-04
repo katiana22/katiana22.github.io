@@ -124,47 +124,8 @@ It is important to note that Katiana Kontolati is a member of the Order of the U
       </ul>
     </div>
     </div>
-    
-    <div class="container">
-      <body class="bg-gray-100 text-gray-900 font-sans p-8">
-      <h1 class="text-4xl font-bold mb-6">Software</h1>
-    
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    
-        <!-- Card 1 -->
-        <div class="bg-white p-6 rounded-xl shadow border">
-          <div class="flex justify-between items-center mb-1">
-            <a href="https://github.com/allenai/objaverse-xl" class="text-blue-600 text-lg font-semibold hover:underline">
-              allenai/objaverse-xl
-            </a>
-            <span class="text-sm bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">Framework</span>
-          </div>
-          <p class="text-sm text-gray-700 mb-3">🐚 Scripts for Downloading and Processing Objaverse-XL</p>
-          <div class="text-sm flex space-x-4">
-            <span class="text-orange-500">● Python</span>
-            <span>⭐ 1036</span>
-            <span>🍴 66</span>
-          </div>
-        </div>
-    
-        <!-- Card 2 -->
-        <div class="bg-white p-6 rounded-xl shadow border">
-          <div class="flex justify-between items-center mb-1">
-            <a href="https://github.com/allenai/ai2thor" class="text-blue-600 text-lg font-semibold hover:underline">
-              allenai/ai2thor
-            </a>
-            <span class="text-sm bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">Framework</span>
-          </div>
-          <p class="text-sm text-gray-700 mb-3">🛋️ Interactive Simulated Environments for Embodied AI</p>
-          <div class="text-sm flex space-x-4">
-            <span class="text-green-600">● Unity</span>
-            <span>⭐ 1470</span>
-            <span>🍴 251</span>
-          </div>
-        </div>
-    
-      </div>
-    </body>
+
+    <software-section></software-section>
 
     <div class="container">
       <div class="ctitle">publications</div>
@@ -255,6 +216,54 @@ It is important to note that Katiana Kontolati is a member of the Order of the U
         e_is_shown = !e_is_shown;
       })
     </script>
-    
+
+    <script type="module">
+    class SoftwareSection extends HTMLElement {
+      connectedCallback() {
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = `
+          <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+          <div class="bg-white text-gray-900 p-6 font-sans">
+            <h2 class="text-3xl font-bold mb-6">Software</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  
+              <div class="bg-white p-6 rounded-xl shadow border">
+                <div class="flex justify-between items-center mb-1">
+                  <a href="https://github.com/allenai/objaverse-xl" class="text-blue-600 text-lg font-semibold hover:underline">
+                    allenai/objaverse-xl
+                  </a>
+                  <span class="text-sm bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">Framework</span>
+                </div>
+                <p class="text-sm text-gray-700 mb-3">🐚 Scripts for Downloading and Processing Objaverse-XL</p>
+                <div class="text-sm flex space-x-4">
+                  <span class="text-orange-500">● Python</span>
+                  <span>⭐ 1036</span>
+                  <span>🍴 66</span>
+                </div>
+              </div>
+  
+              <div class="bg-white p-6 rounded-xl shadow border">
+                <div class="flex justify-between items-center mb-1">
+                  <a href="https://github.com/allenai/ai2thor" class="text-blue-600 text-lg font-semibold hover:underline">
+                    allenai/ai2thor
+                  </a>
+                  <span class="text-sm bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">Framework</span>
+                </div>
+                <p class="text-sm text-gray-700 mb-3">🛋️ Interactive Simulated Environments for Embodied AI</p>
+                <div class="text-sm flex space-x-4">
+                  <span class="text-green-600">● Unity</span>
+                  <span>⭐ 1470</span>
+                  <span>🍴 251</span>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        `;
+      }
+    }
+  
+    customElements.define('software-section', SoftwareSection);
+  </script>
   </body>
 </html>
